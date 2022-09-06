@@ -1,0 +1,287 @@
+@import url('./reset.css');
+
+.nav_container {
+  height: 80px;
+  margin: 0 auto;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 90%;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  column-gap: 10rem;
+}
+
+.link {
+  color: var(--color_black);
+  font-size: 1.8rem;
+}
+
+/* header */
+
+/* header {
+  background-color: lightcoral;
+} */
+.header_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;
+  padding: 0 10rem;
+}
+
+.content h1 {
+  font-size: 6.4rem;
+  color: var(--color_red);
+}
+.content p {
+  font-size: 2.4rem;
+  max-width: 460px;
+  margin: 2rem 0 8rem 0;
+}
+
+.btn_big {
+  padding: 1.8rem 4.6rem;
+  border-radius: 2rem;
+  font-size: 2.4rem;
+}
+.banner_img {
+  max-width: 860px;
+}
+
+/* main */
+.container_ranking {
+  padding: 0 10rem;
+  height: 50px;
+}
+.container_ranking img {
+  max-width: 180px;
+  height: auto;
+}
+
+.background {
+  position: absolute;
+  width: 80vw;
+  height: 280px;
+  background-color: var(--color_red);
+  z-index: -1;
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+}
+/* cards */
+.cards_container {
+  padding: 0 10rem;
+}
+
+.ranking_img {
+  margin-top: 4rem;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  column-gap: 8vw;
+}
+.card {
+  width: 260px;
+}
+
+.card img {
+  max-width: 200px;
+  height: auto;
+}
+
+.card h2 {
+  font-size: 2.4rem;
+  color: var(--color_white);
+}
+.card p {
+  font-size: 1.6rem;
+  color: var(--color_white);
+}
+.card :first-child {
+  margin: 1rem 0;
+}
+
+.card :last-child {
+  margin: 2rem 0;
+}
+
+/* circle */
+.icons_container {
+  margin-top: 5rem;
+  padding: 0 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+
+.icon_left,
+.icon_right {
+  flex: 1;
+}
+
+.icon_div {
+  display: flex;
+  align-items: center;
+  column-gap: 4rem;
+}
+
+.circle_green {
+  background-color: var(--color_light_green);
+}
+
+.circle_white {
+  background-color: var(--color_light_white);
+}
+
+.setzling {
+  padding: 1.2rem;
+}
+
+.icon p {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/* media screen */
+@media screen and (max-width: 1284px) {
+  .header_container {
+    padding: 0 2rem;
+  }
+  .content h1 {
+    font-size: 4.2rem;
+    color: var(--color_red);
+  }
+
+  .content p {
+    font-size: 1.8rem;
+    max-width: 380px;
+    margin: 2rem 0 4rem 0;
+  }
+
+  .banner_img {
+    max-width: 480px;
+  }
+  .background {
+    position: absolute;
+    width: 95vw;
+  }
+
+  .btn_big {
+    padding: 0.75rem 1.75rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1167px) {
+  .background {
+    display: none;
+  }
+
+  .background_small {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    background-color: var(--color_red);
+    z-index: -1;
+    bottom: 0;
+  }
+  .cards_container,
+  .container_ranking {
+    padding: 0 2rem;
+  }
+  .container_ranking {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .cards {
+    justify-content: center;
+    row-gap: 4rem;
+  }
+
+  .card {
+    position: relative;
+  }
+
+  .card .desc {
+    padding: 0 1rem;
+  }
+
+  .icons_container h2 {
+    text-align: center;
+  }
+
+  .icon_div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header_container {
+    height: 100%;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header_container .content {
+    order: 2;
+  }
+
+  .banner_img {
+    margin-top: 5rem;
+    order: 1;
+  }
+  .content h1 {
+    font-size: 3.2rem;
+    color: var(--color_red);
+  }
+
+  .content p {
+    font-size: 1.6rem;
+    max-width: 480px;
+    margin: 2rem 0 4rem 0;
+    padding-right: 8rem;
+  }
+
+  .btn_big {
+    padding: 0.75rem 1.75rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .menu {
+    column-gap: 4vw;
+  }
+
+  .icons_container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 406px) {
+  .btn_small {
+    font-size: 1.4rem;
+    padding: 0.65rem 0.65rem;
+  }
+}
